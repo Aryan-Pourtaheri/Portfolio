@@ -33,8 +33,6 @@ npm run dev
 
 ---
 
-## � Screenshots
-
 <div align="center">
 	<img src="/public/assets/images/profile-picture.jpg" alt="Profile Screenshot" width="200" />
 	<img src="/public/assets/icons/arian-logo.svg" alt="Logo Screenshot" width="80" />
@@ -98,7 +96,7 @@ Pull requests are welcome! For major changes, please open an issue first to disc
 
 ---
 
-## � Contact
+## 📞 Contact
 
 - **Portfolio:** [Arian Pourtaheri](https://github.com/Aryan-Pourtaheri)
 - **Email:** (use the contact form on the site!)
