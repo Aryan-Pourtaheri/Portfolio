@@ -1,41 +1,67 @@
-## Portfolio Website (In Progress)
+🌐 Portfolio Website
 
-A modern, responsive portfolio built with **Next.js** and **Tailwind CSS**. This project is a work in progress and will showcase my work, skills, and provide easy ways to contact me and connect via my social links. The stack is designed for scalability, maintainability, and a great developer experience.
+A modern, responsive portfolio built with Next.js and Tailwind CSS. It showcases my projects, skills, and provides easy ways to connect with me.
 
-### Features
+✨ Features
 
-- ⚡ **Next.js 15**: Fast, SEO-friendly React framework
-- 🎨 **Tailwind CSS**: Utility-first styling for rapid UI development
-- 🧩 **Component-based**: Clean, reusable React components
-- 📱 **Responsive Design**: Looks great on all devices
-- 📨 **Contact Section**: Easy ways to reach me (email, social links, etc.)
-- 🛠️ **Project Showcase**: Highlight my best work and skills
-- 🔗 **Social Links**: Connect with me on GitHub, LinkedIn, and more
-- 🗄️ **Backend Ready**: Plan to integrate Node.js backend for forms, authentication, or project data
+⚡ Next.js 15: Fast, SEO-friendly React framework
 
-### Tech Stack
+🎨 Tailwind CSS: Utility-first styling for rapid UI development
 
-- Next.js
-- React
-- Tailwind CSS
-- Node.js (planned for backend features)
-- PostCSS
+🧩 Component-based: Clean, reusable React components
 
-### Getting Started
+📱 Responsive Design: Looks great on desktop, tablet, and mobile
 
-1. Clone the repo
-2. Install dependencies: `npm install`
-3. Run the dev server: `npm run dev`
-4. Customize your content in the `src` directory
+📨 Contact Section: Reach me easily via email or social links
 
----
+🛠️ Project Showcase: Highlights my best work and skills
 
-**Planned improvements:**
+🔗 Social Links: GitHub, LinkedIn, and more for networking
 
-- Add backend for contact forms and project management
-- More animations and interactive UI
-- Admin dashboard for content updates
+🎬 Animations: Smooth transitions and hover effects with Framer Motion
 
----
+🛠️ Tech Stack
 
-_This project is under active development. Stay tuned for updates!_
+Next.js
+
+React
+
+Tailwind CSS
+
+Framer Motion
+
+Node.js (future backend expansion)
+
+🚀 Getting Started
+
+Clone the repo:
+
+git clone https://github.com/yourusername/portfolio.git
+cd portfolio
+
+
+Install dependencies:
+
+npm install
+
+
+Run the development server:
+
+npm run dev
+
+
+Open http://localhost:3000
+ to see your portfolio.
+
+📌 Roadmap / Future Enhancements
+
+ Blog section with MDX support
+
+ Dark mode toggle
+
+ Admin dashboard for easy content updates
+
+
+👤 Author
+
+Built with ❤️ by Arian Pourtaheri
