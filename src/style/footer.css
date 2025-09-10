@@ -1,0 +1,128 @@
+/* Enhanced Footer Styles */
+ .footer {
+  background: linear-gradient(to right, purple, rgba(172, 110, 68, 0.434),#00d8ff ); /* light blue-gray */
+  color: #23272f;
+  border-radius: 1.5rem 1.5rem 0 0;
+  box-shadow: 0 8px 32px 0 rgba(0,216,255,0.18);
+  backdrop-filter: blur(12px) saturate(140%);
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+  border-top: 0px solid transparent;
+  position: relative;
+  overflow: visible;
+  animation: footer-fade-in 1.2s cubic-bezier(0.4,0,0.2,1);
+  margin-bottom: 0;
+  padding-bottom: 0.5rem;
+  padding-top: 2rem;
+}
+
+body.dark .footer {
+  background: rgba(24, 24, 24, 0.92);
+  color: #f8fafc;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: -2px; left: 0; right: 0; height: 5px;
+  background: linear-gradient(90deg, #00d8ff, #6a11cb, #a044ff, #00d8ff);
+  background-size: 300% 100%;
+  animation: footer-gradient-move 4s linear infinite;
+  border-radius: 1.5rem 1.5rem 0 0;
+  z-index: 2;
+  box-shadow: 0 0 16px 2px #00d8ff55;
+}
+.footer .footer-link svg {
+  filter: drop-shadow(0 0 6px #00d8ff88);
+  transition: filter 0.3s, transform 0.3s;
+}
+.footer .footer-link:hover svg {
+  filter: drop-shadow(0 0 12px #a044ffcc);
+  transform: scale(1.15) rotate(-6deg);
+}
+@keyframes footer-gradient-move {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+@keyframes footer-fade-in {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.footer .footer-content {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0 0.2rem 0;
+}
+.footer .footer-links {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+.footer .footer-link {
+  color: #00d8ff;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.3s, transform 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.footer .footer-link:hover {
+  color: #a044ff;
+  transform: translateY(-2px) scale(1.08);
+  text-shadow: 0 2px 8px #00d8ff44;
+}
+.footer .footer-year {
+  font-size: 0.95rem;
+  color: #bdbdbd;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+
+@keyframes footerGradientMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+@keyframes footerFadeIn {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.animate-bounce-slow {
+  animation: bounce-slow 2.2s infinite cubic-bezier(0.4,0,0.2,1);
+}
+.animate-spin-slow {
+  animation: spin 3.5s linear infinite;
+}
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+.animate-fadeInUp {
+  animation: fadeInUp 1.2s cubic-bezier(0.4,0,0.2,1);
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-gradientText {
+  background: linear-gradient(90deg, #00d8ff, #6a11cb, #a044ff);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientTextMove 3.5s ease-in-out infinite alternate;
+}
+@keyframes gradientTextMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}

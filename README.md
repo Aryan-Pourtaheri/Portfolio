@@ -1,67 +1,110 @@
-🌐 Portfolio Website
-
-A modern, responsive portfolio built with Next.js and Tailwind CSS. It showcases my projects, skills, and provides easy ways to connect with me.
-
-✨ Features
-
-⚡ Next.js 15: Fast, SEO-friendly React framework
-
-🎨 Tailwind CSS: Utility-first styling for rapid UI development
-
-🧩 Component-based: Clean, reusable React components
-
-📱 Responsive Design: Looks great on desktop, tablet, and mobile
-
-📨 Contact Section: Reach me easily via email or social links
-
-🛠️ Project Showcase: Highlights my best work and skills
-
-🔗 Social Links: GitHub, LinkedIn, and more for networking
-
-🎬 Animations: Smooth transitions and hover effects with Framer Motion
-
-🛠️ Tech Stack
-
-Next.js
-
-React
-
-Tailwind CSS
-
-Framer Motion
-
-Node.js (future backend expansion)
-
-🚀 Getting Started
-
-Clone the repo:
-
 git clone https://github.com/yourusername/portfolio.git
-cd portfolio
-
-
-Install dependencies:
-
 npm install
-
-
-Run the development server:
-
 npm run dev
 
+<div align="center">
+	<img src="/assets/icons/arian-logo.svg" alt="Arian Portfolio Logo" width="80" />
+	<h1>Arian Pourtaheri – Developer Portfolio 🚀</h1>
+	<p><b>Modern, animated, and fully responsive portfolio built with Next.js, React, and Tailwind CSS</b></p>
+</div>
 
-Open http://localhost:3000
- to see your portfolio.
+---
 
-📌 Roadmap / Future Enhancements
+## ✨ Features
 
- Blog section with MDX support
+- ⚡ **Blazing Fast**: Built with Next.js 15 for optimal performance
+- 🎨 **Beautiful Animations**: Framer Motion for smooth, modern UI transitions
+- 🌗 **Dark/Light Mode**: Toggle with a single click, pure CSS and context-powered
+- 🖼️ **Custom Logo & Favicon**: Unique branding with SVG assets
+- 📱 **Fully Responsive**: Looks great on all devices
+- � **Contact Form**: EmailJS-powered, with validation and feedback
+- 🛠️ **Easy Customization**: Modular components and clean structure
 
- Dark mode toggle
+---
 
- Admin dashboard for easy content updates
+## 🛠️ Tech Stack
 
+- [Next.js 15](https://nextjs.org/)
+- [React 18](https://react.dev/)
+- [Tailwind CSS](https://tailwindcss.com/) (for global theming)
+- [Framer Motion](https://www.framer.com/motion/) (animations)
+- [EmailJS](https://www.emailjs.com/) (contact form)
+- Pure CSS for custom components
 
-👤 Author
+---
 
-Built with ❤️ by Arian Pourtaheri
+## � Screenshots
+
+<div align="center">
+	<img src="/public/assets/images/profile-picture.jpg" alt="Profile Screenshot" width="200" />
+	<img src="/public/assets/icons/arian-logo.svg" alt="Logo Screenshot" width="80" />
+</div>
+
+---
+
+## 🚀 Getting Started
+
+1. **Clone the repo:**
+   ```bash
+   git clone https://github.com/Aryan-Pourtaheri/Portfolio.git
+   cd Portfolio
+   ```
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+3. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+4. **Open [http://localhost:3000](http://localhost:3000) in your browser.**
+
+---
+
+## 📝 Customization
+
+- **Logo & Favicon:** Replace `/public/assets/icons/arian-logo.svg` and `/public/assets/icons/nextjs.png` with your own.
+- **Profile Picture:** Update `/public/assets/images/profile-picture.jpg`.
+- **Projects:** Edit `src/data/projects.ts` to showcase your work.
+- **Contact Form:** Configure your [EmailJS](https://dashboard.emailjs.com/) service and template IDs in `src/lib/ContactUs.tsx`.
+- **Colors & Styles:** Tweak `src/style/main.css` and `src/style/navbar.css` for your brand.
+
+---
+
+## 📂 Project Structure
+
+```
+portfolio/
+├── public/
+│   └── assets/
+│       ├── icons/
+│       └── images/
+├── src/
+│   ├── app/
+│   ├── components/
+│   ├── context/
+│   ├── data/
+│   ├── lib/
+│   └── style/
+├── package.json
+└── ...
+```
+
+---
+
+## 🤝 Contributing
+
+Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
+
+---
+
+## � Contact
+
+- **Portfolio:** [Arian Pourtaheri](https://github.com/Aryan-Pourtaheri)
+- **Email:** (use the contact form on the site!)
+
+---
+
+<div align="center">
+	<b>Made with ❤️ by Arian Pourtaheri</b>
+</div>

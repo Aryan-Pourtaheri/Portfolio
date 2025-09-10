@@ -33,10 +33,12 @@ export default function RootLayout({
         <link rel="icon" href="/assets/icons/portfolio.png" type="image/png" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased transition-colors duration-500 bg-[#f8fafc] dark:bg-[#181818]`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased transition-colors duration-500 bg-[#f8fafc] dark:bg-[#181818] min-h-screen flex flex-col`}
       >
         <ThemeProvider>
-          {children}
+          <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+            {children}
+          </div>
         </ThemeProvider>
       </body>
     </html>
