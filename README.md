@@ -3,7 +3,7 @@ npm install
 npm run dev
 
 <div align="center">
-	<img src="/assets/icons/arian-logo.svg" alt="Arian Portfolio Logo" width="80" />
+	<img src="/public/assets/icons/arian-logo.svg" alt="Arian Portfolio Logo" width="80" />
 	<h1>Arian Pourtaheri – Developer Portfolio 🚀</h1>
 	<p><b>Modern, animated, and fully responsive portfolio built with Next.js, React, and Tailwind CSS</b></p>
 </div>
