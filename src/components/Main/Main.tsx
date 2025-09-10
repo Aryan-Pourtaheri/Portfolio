@@ -3,26 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 // Project data for mapping
-const projects = [
-  {
-    title: "Animated Portfolio",
-    description: "A modern, animated portfolio using Next.js, Tailwind, and Framer Motion.",
-    image: "/images/project1.png",
-    link: "https://github.com/",
-  },
-  {
-    title: "Realtime Chat App",
-    description: "A full-stack chat app with live messaging and authentication.",
-    image: "/images/project2.png",
-    link: "https://github.com/",
-  },
-  {
-    title: "3D Product Viewer",
-    description: "A React Three Fiber demo for interactive 3D product showcases.",
-    image: "/images/project3.png",
-    link: "https://github.com/",
-  },
-];
+import { projects } from "@/data/projects";
 
 
 const sectionVariants = {
@@ -230,13 +211,6 @@ const Main = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: idx * 0.2, type: "spring" }}
             >
-              <motion.img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-40 object-cover rounded mb-4"
-                whileHover={{ scale: 1.05, rotate: [0, 3, -3, 0] }}
-                transition={{ duration: 0.5, repeat: Infinity, repeatType: "reverse" }}
-              />
               <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
               <p className="mb-4">{project.description}</p>
               <a
