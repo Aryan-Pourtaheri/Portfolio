@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useTheme } from '@/context/ThemeContext';
 import '@/style/navbar.css';
 
@@ -58,47 +59,53 @@ function Navbar() {
           </button>
         </div>
       </nav>
-      {/* Mobile sidebar menu */}
-      {menuOpen && (
-        <div
-          id="navbar-mobile-menu"
-          style={{
-            position: 'fixed',
-            top: 0,
-            right: 0,
-            width: 220,
-            height: '100vh',
-            background: isDark ? '#181818' : '#f8fafc',
-            boxShadow: '-2px 0 16px rgba(0,0,0,0.12)',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'flex-start',
-            padding: '4rem 1.5rem',
-            gap: '1.5rem',
-            zIndex: 2000,
-          }}
-        >
-          <button
-            aria-label="Close menu"
-            onClick={handleMenuToggle}
+      {/* Mobile sidebar menu with animation */}
+      <AnimatePresence>
+        {menuOpen && (
+          <motion.div
+            id="navbar-mobile-menu"
+            initial={{ x: 250, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: 250, opacity: 0 }}
+            transition={{ type: 'spring', stiffness: 400, damping: 32 }}
             style={{
-              alignSelf: 'flex-end',
-              background: 'none',
-              border: 'none',
-              fontSize: 28,
-              color: isDark ? '#fff' : '#222',
-              marginBottom: '2rem',
-              cursor: 'pointer',
+              position: 'fixed',
+              top: 0,
+              right: 0,
+              width: 220,
+              height: '100vh',
+              background: isDark ? '#181818' : '#f8fafc',
+              boxShadow: '-2px 0 16px rgba(0,0,0,0.12)',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'flex-start',
+              padding: '4rem 1.5rem',
+              gap: '1.5rem',
+              zIndex: 2000,
             }}
           >
-            ×
-          </button>
-          <a href="#home" onClick={handleNavClick} style={{ color: isDark ? '#fff' : '#222', fontWeight: 600, fontSize: 18, marginBottom: 16 }}>Home</a>
-          <a href="#about" onClick={handleNavClick} style={{ color: isDark ? '#fff' : '#222', fontWeight: 600, fontSize: 18, marginBottom: 16 }}>About</a>
-          <a href="#projects" onClick={handleNavClick} style={{ color: isDark ? '#fff' : '#222', fontWeight: 600, fontSize: 18, marginBottom: 16 }}>Projects</a>
-          <a href="#contact" onClick={handleNavClick} style={{ color: isDark ? '#fff' : '#222', fontWeight: 600, fontSize: 18 }}>Contact</a>
-        </div>
-      )}
+            <button
+              aria-label="Close menu"
+              onClick={handleMenuToggle}
+              style={{
+                alignSelf: 'flex-end',
+                background: 'none',
+                border: 'none',
+                fontSize: 28,
+                color: isDark ? '#fff' : '#222',
+                marginBottom: '2rem',
+                cursor: 'pointer',
+              }}
+            >
+              ×
+            </button>
+            <a href="#home" onClick={handleNavClick} style={{ color: isDark ? '#fff' : '#222', fontWeight: 600, fontSize: 18, marginBottom: 16 }}>Home</a>
+            <a href="#about" onClick={handleNavClick} style={{ color: isDark ? '#fff' : '#222', fontWeight: 600, fontSize: 18, marginBottom: 16 }}>About</a>
+            <a href="#projects" onClick={handleNavClick} style={{ color: isDark ? '#fff' : '#222', fontWeight: 600, fontSize: 18, marginBottom: 16 }}>Projects</a>
+            <a href="#contact" onClick={handleNavClick} style={{ color: isDark ? '#fff' : '#222', fontWeight: 600, fontSize: 18 }}>Contact</a>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
