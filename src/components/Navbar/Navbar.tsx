@@ -12,9 +12,20 @@ const Navbar = () => {
   return (
     <div>
       <nav className="navbar">
-        <div className="navbar-logo">
-          <span>MyPortfolio</span>
-        </div>
+        <a href="#home" className="navbar-logo" style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', textDecoration: 'none' }}>
+          <img src="/assets/icons/arian-logo.svg" alt="Arian Logo" style={{ width: 36, height: 36, borderRadius: '8px', boxShadow: '0 2px 8px #00d8ff44', background: '#fff' }} />
+          <span
+            style={{
+              fontWeight: 700,
+              fontSize: '1.5rem',
+              letterSpacing: 1,
+              color: isDark ? '#fff' : '#222',
+              transition: 'color 0.3s'
+            }}
+          >
+            Arian Portfolio
+          </span>
+        </a>
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
           <ul className="navbar-links">
             <li><a href="#home">Home</a></li>
