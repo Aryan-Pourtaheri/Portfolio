@@ -4,8 +4,8 @@ import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { getProjects } from "@/data/projects"; // fetch GitHub projects
 import { useTheme } from "@/context/ThemeContext"; // use main theme
 
-const ProjectCard = ({ project, index }) => {
-  const { isDark } = useTheme(); // consume global theme
+const ProjectCard = ({ project, index }: { project: any; index: number }) => {
+  const { isDark } = useTheme();
   const [isHovered, setIsHovered] = useState(false);
 
   const x = useMotionValue(0);
@@ -17,10 +17,10 @@ const ProjectCard = ({ project, index }) => {
   const rotateX = useTransform(mouseYSpring, [-0.5, 0.5], ["6deg", "-6deg"]);
   const rotateY = useTransform(mouseXSpring, [-0.5, 0.5], ["-6deg", "6deg"]);
 
-  const handleMouseMove = (e) => {
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
-    x.set(e.clientX / rect.width - 0.5);
-    y.set(e.clientY / rect.height - 0.5);
+    x.set((e.clientX - rect.left) / rect.width - 0.5);
+    y.set((e.clientY - rect.top) / rect.height - 0.5);
   };
 
   const handleMouseLeave = () => {
@@ -75,12 +75,20 @@ const ProjectCard = ({ project, index }) => {
   );
 };
 
-const ProjectsSection = () => {
-  const { isDark } = useTheme(); // global theme
-  const [projects, setProjects] = useState([]);
+interface Project {
+  title: string;
+  description: string;
+  link: string;
+}
+
+const ProjectsSection: React.FC = () => {
+  const { isDark } = useTheme();
+  const [projects, setProjects] = useState<Project[]>([]);
 
   useEffect(() => {
-    getProjects().then(setProjects).catch(console.error);
+    getProjects()
+      .then((data) => setProjects(data))
+      .catch((error) => console.error("Failed to load projects:", error));
   }, []);
 
   return (
@@ -91,13 +99,23 @@ const ProjectsSection = () => {
       }`}
     >
       <div className="text-center mb-12">
-        <h2 className={`text-5xl font-bold mb-2 ${isDark ? "text-white" : "text-gray-900"}`}>
+        <h2
+          className={`text-5xl font-bold mb-2 ${
+            isDark ? "text-white" : "text-gray-900"
+          }`}
+        >
           Featured <span className="text-[#00d8ff]">Projects</span>
         </h2>
-        <p className={`text-lg ${isDark ? "text-gray-400" : "text-gray-600"}`}>
+        <p
+          className={`text-lg ${
+            isDark ? "text-gray-400" : "text-gray-600"
+          }`}
+        >
           Explore my latest work
         </p>
       </div>
+
+      {/* Scroll container */}
       <div className="flex gap-8 overflow-x-auto pb-8 px-8 sm:px-12 lg:px-16 snap-x snap-mandatory scroll-smooth scrollbar-x">
         {projects.map((project, idx) => (
           <div key={idx} className="snap-center">
@@ -108,5 +126,6 @@ const ProjectsSection = () => {
     </section>
   );
 };
+
 
 export default ProjectsSection;
