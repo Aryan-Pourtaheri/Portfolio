@@ -1,4 +1,3 @@
-
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
@@ -6,6 +5,7 @@ import { motion } from "framer-motion";
 import { projects } from "@/data/projects";
 import { ContactUs } from "@/lib/ContactUs";
 import ProjectsSection from "../projectsSection";
+import { Typewriter } from 'react-simple-typewriter';
 
 
 const sectionVariants = {
@@ -80,19 +80,30 @@ const Main = () => {
           Hi, I'm <span className="text-[#00d8ff]">Arian Pourtaheri</span>
         </motion.h1>
         <motion.p
-          className="main-subtitle mb-8"
-          initial={{ opacity: 0, y: 40 }}
+          className="main-subtitle mb-8 text-xl md:text-2xl font-medium text-gray-300 flex items-center justify-center gap-2"
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 1 }}
         >
           <motion.span
+            className="inline-block text-2xl"
             initial={{ scale: 1 }}
-            animate={{ scale: [1, 1.1, 1] }}
+            animate={{ scale: [1, 1.2, 1] }}
             transition={{ duration: 1.5, repeat: Infinity }}
-            className="inline-block mr-2"
-          >✨</motion.span>
-          Front-End Developer | React | Next.js | Tailwind CSS
+          >
+            ✨
+          </motion.span>
+            <Typewriter
+              words={['Creative Front-End Developer', 'React & Next.js Specialist', 'Tailwind CSS Aficionado', 'UI/UX & Interactive Designer', 'Web Performance Enthusiast']}
+              loop={0} // 0 = infinite
+              cursor
+              cursorStyle="|"
+              typeSpeed={80}
+              deleteSpeed={50}
+              delaySpeed={1500}
+            />
         </motion.p>
+
         <motion.a
           href="#contact"
           className="main-contact-btn"
