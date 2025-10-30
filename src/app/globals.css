@@ -32,25 +32,36 @@ body {
   scrollbar-color: #00d8ff #1a1a1a; /* thumb color | track color */
 }
 
-.scrollbar-x {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(0, 216, 255, 0.6) transparent;
-}
-
+/* Smooth, modern scrollbar styling */
 .scrollbar-x::-webkit-scrollbar {
-  height: 8px;
+  height: 10px; /* Only for x-axis */
 }
 
 .scrollbar-x::-webkit-scrollbar-track {
   background: transparent;
+  border-radius: 9999px;
 }
 
 .scrollbar-x::-webkit-scrollbar-thumb {
-  background: rgba(0, 216, 255, 0.6);
+  background: linear-gradient(90deg, #00d8ff, #007aff, #a044ff);
   border-radius: 9999px;
-  transition: background 0.3s;
+  border: 2px solid transparent;
+  background-clip: content-box;
+  transition: all 0.3s ease;
 }
 
 .scrollbar-x::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 216, 255, 0.9);
+  background: linear-gradient(90deg, #00ffff, #ff00ff);
+  transform: scaleY(1.1);
+}
+
+/* Firefox support */
+.scrollbar-x {
+  scrollbar-width: thin;
+  scrollbar-color: #00d8ff transparent;
+}
+
+/* Optional glow for dark mode */
+body.dark .scrollbar-x::-webkit-scrollbar-thumb {
+  box-shadow: 0 0 8px #00d8ff88;
 }

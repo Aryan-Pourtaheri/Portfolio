@@ -5,7 +5,7 @@
   color: #1f2937;
 }
 body.dark .main-content {
-  background: linear-gradient(to bottom, #181818, #23272f);
+  background: linear-gradient(1000deg, #181818, #23272f);
   color: #fff;
 }
 
