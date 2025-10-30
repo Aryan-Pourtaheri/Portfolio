@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 // Project data for mapping
 import { projects } from "@/data/projects";
 import { ContactUs } from "@/lib/ContactUs";
+import ProjectsSection from "../projectsSection";
 
 
 const sectionVariants = {
@@ -193,40 +194,7 @@ const Main = () => {
       </motion.section>
 
       {/* Projects Section */}
-      <motion.section
-        id="projects"
-        className="projects-section"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        custom={2}
-        variants={sectionVariants}
-      >
-  <h2 className="projects-title">Projects</h2>
-        <div className="grid md:grid-cols-2 gap-8">
-          {projects.map((project, idx) => (
-            <motion.div
-              key={project.title}
-              className="project-card cursor-pointer"
-              whileHover={{ scale: 1.08, rotate: [0, 2, -2, 0], boxShadow: "0 0 32px #00d8ff" }}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: idx * 0.2, type: "tween" }}
-            >
-              <h3 className="project-title mb-2">{project.title}</h3>
-              <p className="project-desc mb-4">{project.description}</p>
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="project-link"
-              >
-                View on GitHub
-              </a>
-            </motion.div>
-          ))}
-        </div>
-      </motion.section>
+      <ProjectsSection />
 
       {/* Contact Section */}
       <motion.section

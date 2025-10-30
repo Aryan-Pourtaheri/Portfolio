@@ -42,6 +42,16 @@ const fetchGitHubProjects = async (username: string): Promise<Project[]> => {
         title: "Like-Shop",
         description: "Like-Shop",
         link: "https://github.com/Aryan-Pourtaheri/Like-Shop",
+      },      
+      {
+        title: "Like-Shop",
+        description: "Like-Shop",
+        link: "https://github.com/Aryan-Pourtaheri/Like-Shop",
+      },
+      {
+        title: "Like-Shop",
+        description: "Like-Shop",
+        link: "https://github.com/Aryan-Pourtaheri/Like-Shop",
       },
     ];
   }
