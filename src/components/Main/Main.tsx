@@ -1,8 +1,6 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-// Project data for mapping
-import { projects } from "@/data/projects";
 import { ContactUs } from "@/lib/ContactUs";
 import ProjectsSection from "../projectsSection";
 import { Typewriter } from 'react-simple-typewriter';
